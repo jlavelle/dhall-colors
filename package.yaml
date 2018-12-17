@@ -1,0 +1,48 @@
+name:                dhall-colors
+version:             0.1.0.0
+github:              "jlavelle/dhall-colors"
+license:             BSD3
+author:              "John C. Lavelle"
+maintainer:          "john@lavelle.tech"
+copyright:           "2018 John C. Lavelle"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/jlavelle/dhall-colors#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- dhall
+- text
+- bytestring
+- http-client
+- http-client-tls
+- tagsoup
+- attoparsec
+
+library:
+  source-dirs: src
+
+executables:
+  dhall-colors-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - dhall-colors
+
+tests:
+  dhall-colors-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - dhall-colors
