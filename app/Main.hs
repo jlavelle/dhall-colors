@@ -1,4 +1,5 @@
 {-# LANGUAGE TypeApplications #-}
+{-# LANGUAGE OverloadedStrings #-}
 
 module Main where
 
@@ -22,7 +23,7 @@ parsePage = do
   getColors = fmap ((getColor . head) &&& (getName . last))
             . fmap (\t -> [x | x@(TagBranch "p" _ _) <- Tree.universeTree t])
             . (\t -> [ cs | (TagBranch "div" _ cs) <- Tree.universeTree t ])
-            . Tree.tagTree @ByteString
+            . Tree.tagTree
             . takeWhile (~/= ("<h2>" :: String))
             . tail
             . dropWhile (~/= ("<h3>" :: String))
