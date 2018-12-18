@@ -20,23 +20,22 @@ parsePage :: IO [(ByteString, ByteString)]
 parsePage = do
   m  <- TLS.newTlsManager
   r  <- HTTP.parseRequest "https://en.wikipedia.org/wiki/List_of_colors_(compact)"
-  getColors . Tag.parseTags . HTTP.responseBody <$> HTTP.httpLbs r m
+  getColors . Tree.parseTree . HTTP.responseBody <$> HTTP.httpLbs r m
  where
   getColors = catMaybes
-            . fmap (bisequenceA <<< (getColor <=< headM) &&& (getName <=< lastM))
-            . fmap (\t -> [x | x@(TagBranch "p" _ _) <- Tree.universeTree t])
-            . (\t -> [ cs | (TagBranch "div" _ cs) <- Tree.universeTree t ])
-            . Tree.tagTree
-            . takeWhile (~/= ("<h2>" :: String))
-            . tail
-            . dropWhile (~/= ("<h3>" :: String))
+            . fmap (bisequenceA . getData . pElems)
+            . divChildren
    where
-    getColor (TagBranch _ as _) = lookup "title" as
-    getName (TagBranch _ _ t) = fmap f . headM $ hasUrl <> noUrl
+    divChildren t = [ x | (TagBranch "div" _ x) <- Tree.universeTree t ]
+    pElems t      = [ x | x@(TagBranch "p" _ _) <- Tree.universeTree t ]
+    getData       = (getColor <=< headM) &&& (getName <=< lastM)
      where
-      hasUrl = concat [ cs | (TagBranch "a" _ cs) <- Tree.universeTree t ]
-      noUrl  = [ x | x@(TagLeaf _) <- Tree.universeTree t]
-      f (TagLeaf (TagText x)) = x
+      getColor (TagBranch _ as _) = lookup "title" as
+      getName (TagBranch _ _ t)   = fmap tagText . headM $ hasUrl <> noUrl
+       where
+        hasUrl = concat [ cs | (TagBranch "a" _ cs) <- Tree.universeTree t ]
+        noUrl  = [ x | x@(TagLeaf _) <- Tree.universeTree t]
+        tagText (TagLeaf (TagText x)) = x
 
 headM :: [a] -> Maybe a
 headM []    = Nothing
