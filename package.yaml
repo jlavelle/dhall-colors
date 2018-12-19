@@ -21,6 +21,8 @@ dependencies:
 - http-client-tls
 - tagsoup
 - attoparsec
+- microlens
+- microlens-platform
 
 library:
   source-dirs: src

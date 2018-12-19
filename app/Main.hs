@@ -19,11 +19,14 @@ import Control.Monad ((<=<))
 import Data.Bitraversable (bisequenceA)
 import Data.Maybe (fromJust, catMaybes)
 import Data.Functor ((<&>))
+import Lens.Micro.Platform ((%~), _head, _tail, each, filtered)
+import Data.Char (toUpper, isAlphaNum)
+import Data.Foldable (fold)
 
 parsePage :: IO [Color]
 parsePage = do
-  m  <- TLS.newTlsManager
-  r  <- HTTP.parseRequest "https://en.wikipedia.org/wiki/List_of_colors_(compact)"
+  m <- TLS.newTlsManager
+  r <- HTTP.parseRequest "https://en.wikipedia.org/wiki/List_of_colors_(compact)"
   getColors . Tree.parseTree . T.decodeUtf8 . HTTP.responseBody <$> HTTP.httpLbs r m
  where
   getColors = catMaybes
@@ -69,6 +72,9 @@ parseColorVals = go . T.words . stripParens
 
 parseDecimal :: Text -> Maybe Int
 parseDecimal = either (const Nothing) (Just . fst) . T.decimal
+
+camelCase :: Text -> Text
+camelCase = fold . (_tail . each . _head %~ toUpper) . fmap (T.filter isAlphaNum) . T.words . T.toLower
 
 headM :: [a] -> Maybe a
 headM []    = Nothing
