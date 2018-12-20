@@ -956,7 +956,7 @@
     , name =
         "Cadmium violet"
     }
-, `caféAuLait` =
+, cafeAuLait =
     { rgb =
         { r = 166, g = 123, b = 91 }
     , hex =
@@ -964,7 +964,7 @@
     , name =
         "Café au lait"
     }
-, `caféNoir` =
+, cafeNoir =
     { rgb = { r = 75, g = 54, b = 33 }, hex = "#4B3621", name = "Café noir" }
 , calPolyPomonaGreen =
     { rgb =
@@ -3340,7 +3340,7 @@
     { rgb = { r = 42, g = 52, b = 57 }, hex = "#2a3439", name = "Gunmetal" }
 , guyabano =
     { rgb = { r = 248, g = 248, b = 248 }, hex = "#F8F8F8", name = "Guyabano" }
-, `halayàÚbe` =
+, halayaUbe =
     { rgb = { r = 102, g = 55, b = 84 }, hex = "#663854", name = "Halayà úbe" }
 , halloweenOrange =
     { rgb =
@@ -7690,7 +7690,7 @@
     }
 , temptress =
     { rgb = { r = 60, g = 33, b = 38 }, hex = "#3C2126", name = "Temptress" }
-, `tenné` =
+, tenne =
     { rgb = { r = 205, g = 87, b = 0 }, hex = "#CD5700", name = "Tenné" }
 , terraCotta =
     { rgb =

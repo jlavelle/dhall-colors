@@ -4,7 +4,6 @@
 
 module Printer where
 
-import Dhall.Map (Map)
 import qualified Dhall.Map as M
 import Dhall.Core (Expr(..), Chunks(..))
 import Dhall.TypeCheck (X)
@@ -16,6 +15,7 @@ import qualified Data.Text as T
 import Data.Char (isAlphaNum, toUpper)
 import Data.Foldable (fold)
 import Lens.Micro.Platform ((%~), _head, _tail, each)
+import Data.Monoid (Endo(..))
 
 import Types (Color(..), RGB(..), Hex(..))
 
@@ -49,7 +49,16 @@ text :: Text -> Expr s a
 text = TextLit . Chunks []
 
 camelCase :: Text -> Text
-camelCase = fold . f . fmap (T.filter isAlphaNum) . T.words . T.toLower
+camelCase = fold . f . fmap (T.filter isAlphaNum) . T.words . replaceDiacritics . T.toLower
  where
   f = _tail . each . _head %~ toUpper
 
+-- temporary hack until I find a better solution
+replaceDiacritics :: Text -> Text
+replaceDiacritics = appEndo $ foldMap (Endo . uncurry T.replace) rs
+ where
+  rs =
+    [ ("é", "e")
+    , ("ú", "u")
+    , ("à", "a")
+    ]
