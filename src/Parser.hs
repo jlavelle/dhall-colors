@@ -8,18 +8,17 @@ import Data.Text (Text)
 import qualified Text.HTML.TagSoup.Tree as Tree
 import Text.HTML.TagSoup.Tree (TagTree(..))
 import Text.HTML.TagSoup (Tag(..))
-import Text.HTML.TagSoup.Tree (TagTree)
 import Control.Arrow ((&&&), (<<<))
 import Control.Monad ((<=<))
 import Data.Functor ((<&>))
 import Data.Bitraversable (bisequenceA)
-import Data.Maybe (catMaybes)
+import Data.Maybe (mapMaybe)
 
 import Types (Color(..), RGB(..), Hex(..))
 
 -- Parse the colors on https://en.wikipedia.org/wiki/List_of_colors_(compact)
 parse :: Text -> [Color]
-parse = catMaybes . fmap go . divChildren . Tree.parseTree
+parse = mapMaybe go . divChildren . Tree.parseTree
  where
   go = parseColor <=< nameAndColor . pElems
 
@@ -48,7 +47,7 @@ tagText (TagLeaf (TagText x)) = Just x
 tagText _ = Nothing
 
 parseColor :: (Text, Text) -> Maybe Color
-parseColor (v, n) = parseColorVals v <&> \(r, h) -> Color n r h
+parseColor (v, n) = parseColorVals v <&> uncurry (Color n)
 
 parseColorVals :: Text -> Maybe (RGB, Hex)
 parseColorVals = go . T.words . stripParens
