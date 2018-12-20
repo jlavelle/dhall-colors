@@ -17,6 +17,7 @@ dependencies:
 - dhall
 - text
 - bytestring
+- containers
 - http-client
 - http-client-tls
 - tagsoup

@@ -5,6 +5,7 @@
 module Printer where
 
 import qualified Dhall.Map as M
+import qualified Data.Sequence as Seq
 import Dhall.Core (Expr(..), Chunks(..))
 import Dhall.TypeCheck (X)
 import qualified Dhall.Pretty as DP
@@ -14,28 +15,37 @@ import Data.Text (Text)
 import qualified Data.Text as T
 import Data.Char (isAlphaNum, toUpper)
 import Data.Foldable (fold)
-import Lens.Micro.Platform ((%~), _head, _tail, each)
+import Lens.Micro.Platform ((%~), _head, _tail, each, both)
 import Data.Monoid (Endo(..))
 import Control.Monad ((<=<))
+import Control.Arrow ((>>>), (&&&))
 
 import Types (Color(..), RGB(..), Hex(..))
 
--- render a list of colors to pretty-printed Dhall
-render :: [Color] -> Text
-render = P.renderStrict . P.layoutPretty DP.layoutOpts . DP.prettyExpr @X . colors
+run :: [Color] -> (Text, Text)
+run = colorsRecord &&& colorsList >>> both %~ render
 
-colors :: [Color] -> Expr s a
-colors cs = RecordLit $ M.fromList z
+render :: Expr s X -> Text
+render = P.renderStrict . P.layoutPretty layout . DP.prettyExpr
+ where
+  layout = P.defaultLayoutOptions
+    { P.layoutPageWidth = P.AvailablePerLine 200 1.0 }
+
+colorsRecord :: [Color] -> Expr s a
+colorsRecord cs = RecordLit $ M.fromList z
  where
   z = zip (fmap (camelCase . colorName) cs) (fmap color cs)
+
+colorsList :: [Color] -> Expr s a
+colorsList = ListLit Nothing . Seq.fromList . fmap color
 
 color :: Color -> Expr s a
 color Color{..} = RecordLit asMap
  where
   asMap = M.fromList
-    [ ("rgb", rgb colorRGB)
+    [ ("name", text colorName)
+    , ("rgb", rgb colorRGB)
     , ("hex", hex colorHex)
-    , ("name", text colorName)
     ]
 
 rgb :: RGB -> Expr s a

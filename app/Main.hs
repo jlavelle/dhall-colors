@@ -20,5 +20,6 @@ readWiki = do
 main :: IO ()
 main = do
   setLocaleEncoding utf8
-  c <- Printer.render . Parser.parse <$> readWiki
-  T.writeFile "./output/colors.dhall" c
+  (r, l) <- Printer.run . Parser.run <$> readWiki
+  T.writeFile "./output/colorRecord.dhall" r
+  T.writeFile "./output/colorList.dhall" l

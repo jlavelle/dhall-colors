@@ -17,8 +17,8 @@ import Data.Maybe (mapMaybe)
 import Types (Color(..), RGB(..), Hex(..))
 
 -- Parse the colors on https://en.wikipedia.org/wiki/List_of_colors_(compact)
-parse :: Text -> [Color]
-parse = mapMaybe go . divChildren . Tree.parseTree
+run :: Text -> [Color]
+run = mapMaybe go . divChildren . Tree.parseTree
  where
   go = parseColor <=< nameAndColor . pElems
 
