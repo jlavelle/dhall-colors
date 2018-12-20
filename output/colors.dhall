@@ -94,7 +94,7 @@
     { rgb = { r = 59, g = 122, b = 87 }, hex = "#3B7A57", name = "Amazon" }
 , amber =
     { rgb = { r = 255, g = 191, b = 0 }, hex = "#FFBF00", name = "Amber" }
-, amberSaeece =
+, amberSaeEce =
     { rgb =
         { r = 255, g = 126, b = 0 }
     , hex =
@@ -112,7 +112,7 @@
     , name =
         "Android green"
     }
-, antiflashWhite =
+, antiFlashWhite =
     { rgb =
         { r = 242, g = 243, b = 244 }
     , hex =
@@ -266,7 +266,7 @@
     , name =
         "Baby powder"
     }
-, bakermillerPink =
+, bakerMillerPink =
     { rgb =
         { r = 255, g = 145, b = 175 }
     , hex =
@@ -438,7 +438,7 @@
     , name =
         "Blanched almond"
     }
-, blastoffBronze =
+, blastOffBronze =
     { rgb =
         { r = 165, g = 113, b = 100 }
     , hex =
@@ -530,11 +530,11 @@
     { rgb = { r = 0, g = 185, b = 251 }, hex = "#00B9FB", name = "Blue bolt" }
 , blueCola =
     { rgb = { r = 0, g = 136, b = 220 }, hex = "#0088DC", name = "Blue cola" }
-, bluegray =
+, blueGray =
     { rgb = { r = 102, g = 153, b = 204 }, hex = "#6699CC", name = "Blue-gray" }
-, bluegreen =
+, blueGreen =
     { rgb = { r = 13, g = 152, b = 186 }, hex = "#0D98BA", name = "Blue-green" }
-, bluegreenColorWheel =
+, blueGreenColorWheel =
     { rgb =
         { r = 6, g = 78, b = 64 }
     , hex =
@@ -552,7 +552,7 @@
     , name =
         "Blue lagoon"
     }
-, bluemagentaViolet =
+, blueMagentaViolet =
     { rgb =
         { r = 85, g = 53, b = 146 }
     , hex =
@@ -576,7 +576,7 @@
     , name =
         "Blue sapphire"
     }
-, blueviolet =
+, blueViolet =
     { rgb =
         { r = 138, g = 43, b = 226 }
     , hex =
@@ -584,7 +584,7 @@
     , name =
         "Blue-violet"
     }
-, bluevioletCrayola =
+, blueVioletCrayola =
     { rgb =
         { r = 115, g = 102, b = 189 }
     , hex =
@@ -592,7 +592,7 @@
     , name =
         "Blue-violet (Crayola)"
     }
-, bluevioletColorWheel =
+, blueVioletColorWheel =
     { rgb =
         { r = 77, g = 26, b = 127 }
     , hex =
@@ -816,7 +816,7 @@
     }
 , brownWeb =
     { rgb = { r = 165, g = 42, b = 42 }, hex = "#A52A2A", name = "Brown (web)" }
-, brownnose =
+, brownNose =
     { rgb = { r = 107, g = 68, b = 35 }, hex = "#6B4423", name = "Brown-nose" }
 , brownSugar =
     { rgb =
@@ -1728,7 +1728,7 @@
     { rgb = { r = 0, g = 255, b = 255 }, hex = "#00FFFF", name = "Cyan" }
 , cyanAzure =
     { rgb = { r = 78, g = 130, b = 180 }, hex = "#4E82B4", name = "Cyan azure" }
-, cyanblueAzure =
+, cyanBlueAzure =
     { rgb =
         { r = 70, g = 130, b = 191 }
     , hex =
@@ -1786,7 +1786,7 @@
     }
 , darkBlue =
     { rgb = { r = 0, g = 0, b = 139 }, hex = "#00008B", name = "Dark blue" }
-, darkBluegray =
+, darkBlueGray =
     { rgb =
         { r = 102, g = 102, b = 153 }
     , hex =
@@ -1806,7 +1806,7 @@
     }
 , darkBrown =
     { rgb = { r = 101, g = 67, b = 33 }, hex = "#654321", name = "Dark brown" }
-, darkBrowntangelo =
+, darkBrownTangelo =
     { rgb =
         { r = 136, g = 101, b = 78 }
     , hex =
@@ -2272,7 +2272,7 @@
     }
 , deepGreen =
     { rgb = { r = 5, g = 102, b = 8 }, hex = "#056608", name = "Deep Green" }
-, deepGreencyanTurquoise =
+, deepGreenCyanTurquoise =
     { rgb =
         { r = 14, g = 124, b = 97 }
     , hex =
@@ -3192,7 +3192,7 @@
     }
 , grape =
     { rgb = { r = 111, g = 45, b = 168 }, hex = "#6F2DA8", name = "Grape" }
-, grayHtmlcssGray =
+, grayHtmlCssGray =
     { rgb =
         { r = 128, g = 128, b = 128 }
     , hex =
@@ -3208,7 +3208,7 @@
     , name =
         "Gray (X11 gray)"
     }
-, grayasparagus =
+, grayAsparagus =
     { rgb =
         { r = 70, g = 89, b = 69 }
     , hex =
@@ -3216,7 +3216,7 @@
     , name =
         "Gray-asparagus"
     }
-, grayblue =
+, grayBlue =
     { rgb = { r = 140, g = 146, b = 172 }, hex = "#8C92AC", name = "Gray-blue" }
 , green =
     { rgb = { r = 0, g = 128, b = 1 }, hex = "#008001", name = "Green" }
@@ -3236,7 +3236,7 @@
     , name =
         "Green (Crayola)"
     }
-, greenHtmlcssColor =
+, greenHtmlCssColor =
     { rgb =
         { r = 0, g = 128, b = 0 }
     , hex =
@@ -3278,9 +3278,9 @@
     , name =
         "Green (RYB)"
     }
-, greenblue =
+, greenBlue =
     { rgb = { r = 17, g = 100, b = 180 }, hex = "#1164B4", name = "Green-blue" }
-, greenblueCrayola =
+, greenBlueCrayola =
     { rgb =
         { r = 40, g = 135, b = 200 }
     , hex =
@@ -3290,7 +3290,7 @@
     }
 , greenCola =
     { rgb = { r = 76, g = 114, b = 29 }, hex = "#4C721D", name = "Green Cola" }
-, greencyan =
+, greenCyan =
     { rgb = { r = 0, g = 153, b = 102 }, hex = "#009966", name = "Green-cyan" }
 , greenLizard =
     { rgb =
@@ -3310,7 +3310,7 @@
     }
 , greenSlime =
     { rgb = { r = 101, g = 255, b = 0 }, hex = "#65FF00", name = "Green slime" }
-, greenyellow =
+, greenYellow =
     { rgb =
         { r = 173, g = 255, b = 47 }
     , hex =
@@ -3318,7 +3318,7 @@
     , name =
         "Green-yellow"
     }
-, greenyellowCrayola =
+, greenYellowCrayola =
     { rgb =
         { r = 240, g = 232, b = 145 }
     , hex =
@@ -3748,7 +3748,7 @@
     { rgb = { r = 58, g = 176, b = 158 }, hex = "#3AB09E", name = "Keppel" }
 , keyLime =
     { rgb = { r = 232, g = 244, b = 140 }, hex = "#E8F48C", name = "Key lime" }
-, khakiHtmlcssKhaki =
+, khakiHtmlCssKhaki =
     { rgb =
         { r = 195, g = 176, b = 145 }
     , hex =
@@ -4462,7 +4462,7 @@
     , name =
         "Maroon (Crayola)"
     }
-, maroonHtmlcss =
+, maroonHtmlCss =
     { rgb =
         { r = 128, g = 0, b = 0 }
     , hex =
@@ -4696,7 +4696,7 @@
     }
 , mediumRed =
     { rgb = { r = 177, g = 3, b = 4 }, hex = "#B10304", name = "Medium red" }
-, mediumRedviolet =
+, mediumRedViolet =
     { rgb =
         { r = 187, g = 51, b = 133 }
     , hex =
@@ -4792,7 +4792,7 @@
     , name =
         "Medium violet"
     }
-, mediumVioletred =
+, mediumVioletRed =
     { rgb =
         { r = 199, g = 21, b = 133 }
     , hex =
@@ -5406,7 +5406,7 @@
     { rgb = { r = 114, g = 116, b = 114 }, hex = "#727472", name = "Nickel" }
 , nintendoRed =
     { rgb = { r = 228, g = 0, b = 15 }, hex = "#E4000F", name = "Nintendo red" }
-, nonphotoBlue =
+, nonPhotoBlue =
     { rgb =
         { r = 164, g = 221, b = 237 }
     , hex =
@@ -5574,9 +5574,9 @@
     }
 , orangePeel =
     { rgb = { r = 255, g = 159, b = 0 }, hex = "#FF9F00", name = "Orange peel" }
-, orangered =
+, orangeRed =
     { rgb = { r = 255, g = 104, b = 31 }, hex = "#FF681F", name = "Orange-red" }
-, orangeredCrayola =
+, orangeRedCrayola =
     { rgb =
         { r = 255, g = 83, b = 73 }
     , hex =
@@ -5586,7 +5586,7 @@
     }
 , orangeSoda =
     { rgb = { r = 250, g = 91, b = 61 }, hex = "#FA5B3D", name = "Orange Soda" }
-, orangeyellow =
+, orangeYellow =
     { rgb =
         { r = 245, g = 189, b = 31 }
     , hex =
@@ -5594,7 +5594,7 @@
     , name =
         "Orange-yellow"
     }
-, orangeyellowCrayola =
+, orangeYellowCrayola =
     { rgb =
         { r = 248, g = 213, b = 104 }
     , hex =
@@ -5776,7 +5776,7 @@
     , name =
         "Pale magenta"
     }
-, paleMagentapink =
+, paleMagentaPink =
     { rgb =
         { r = 255, g = 153, b = 204 }
     , hex =
@@ -5788,7 +5788,7 @@
     { rgb = { r = 250, g = 218, b = 221 }, hex = "#FADADD", name = "Pale pink" }
 , palePlum =
     { rgb = { r = 221, g = 160, b = 221 }, hex = "#DDA0DD", name = "Pale plum" }
-, paleRedviolet =
+, paleRedViolet =
     { rgb =
         { r = 219, g = 112, b = 147 }
     , hex =
@@ -5844,7 +5844,7 @@
     , name =
         "Pale violet"
     }
-, paleVioletred =
+, paleVioletRed =
     { rgb =
         { r = 219, g = 112, b = 147 }
     , hex =
@@ -5996,7 +5996,7 @@
     }
 , peach =
     { rgb = { r = 255, g = 203, b = 164 }, hex = "#FFCBA4", name = "Peach" }
-, peachorange =
+, peachOrange =
     { rgb =
         { r = 255, g = 204, b = 153 }
     , hex =
@@ -6012,7 +6012,7 @@
     , name =
         "Peach puff"
     }
-, peachyellow =
+, peachYellow =
     { rgb =
         { r = 250, g = 223, b = 173 }
     , hex =
@@ -6342,7 +6342,7 @@
     , name =
         "Pink lavender"
     }
-, pinkorange =
+, pinkOrange =
     { rgb =
         { r = 255, g = 153, b = 102 }
     , hex =
@@ -6702,15 +6702,15 @@
     }
 , redRyb =
     { rgb = { r = 254, g = 39, b = 18 }, hex = "#FE2712", name = "Red (RYB)" }
-, redbrown =
+, redBrown =
     { rgb = { r = 165, g = 42, b = 42 }, hex = "#A52A2A", name = "Red-brown" }
 , redCola =
     { rgb = { r = 223, g = 1, b = 24 }, hex = "#DF0118", name = "Red cola" }
 , redDevil =
     { rgb = { r = 134, g = 1, b = 17 }, hex = "#860111", name = "Red devil" }
-, redorange =
+, redOrange =
     { rgb = { r = 255, g = 83, b = 73 }, hex = "#FF5349", name = "Red-orange" }
-, redorangeCrayola =
+, redOrangeCrayola =
     { rgb =
         { r = 255, g = 104, b = 31 }
     , hex =
@@ -6718,7 +6718,7 @@
     , name =
         "Red-orange (Crayola)"
     }
-, redorangeColorWheel =
+, redOrangeColorWheel =
     { rgb =
         { r = 255, g = 69, b = 0 }
     , hex =
@@ -6726,7 +6726,7 @@
     , name =
         "Red-orange (Color wheel)"
     }
-, redpurple =
+, redPurple =
     { rgb = { r = 228, g = 0, b = 120 }, hex = "#E40078", name = "Red-purple" }
 , redRum =
     { rgb = { r = 151, g = 58, b = 74 }, hex = "#973A4A", name = "Red rum" }
@@ -6740,9 +6740,9 @@
     , name =
         "Red strawberry"
     }
-, redviolet =
+, redViolet =
     { rgb = { r = 199, g = 21, b = 133 }, hex = "#C71585", name = "Red-violet" }
-, redvioletCrayola =
+, redVioletCrayola =
     { rgb =
         { r = 192, g = 68, b = 143 }
     , hex =
@@ -6750,7 +6750,7 @@
     , name =
         "Red-violet (Crayola)"
     }
-, redvioletColorWheel =
+, redVioletColorWheel =
     { rgb =
         { r = 146, g = 43, b = 62 }
     , hex =
@@ -8076,9 +8076,9 @@
     , name =
         "Violet (web)"
     }
-, violetblue =
+, violetBlue =
     { rgb = { r = 50, g = 74, b = 178 }, hex = "#324AB2", name = "Violet-blue" }
-, violetblueCrayola =
+, violetBlueCrayola =
     { rgb =
         { r = 118, g = 110, b = 200 }
     , hex =
@@ -8086,7 +8086,7 @@
     , name =
         "Violet-blue (Crayola)"
     }
-, violetred =
+, violetRed =
     { rgb = { r = 247, g = 83, b = 148 }, hex = "#F75394", name = "Violet-red" }
 , violinBrown =
     { rgb = { r = 103, g = 68, b = 3 }, hex = "#674403", name = "Violin Brown" }
@@ -8210,7 +8210,7 @@
     }
 , vividRed =
     { rgb = { r = 247, g = 13, b = 26 }, hex = "#F70D1A", name = "Vivid red" }
-, vividRedtangelo =
+, vividRedTangelo =
     { rgb =
         { r = 223, g = 97, b = 36 }
     , hex =
@@ -8452,7 +8452,7 @@
     , name =
         "Yellow (RYB)"
     }
-, yellowgreen =
+, yellowGreen =
     { rgb =
         { r = 154, g = 205, b = 50 }
     , hex =
@@ -8460,7 +8460,7 @@
     , name =
         "Yellow-green"
     }
-, yellowgreenCrayola =
+, yellowGreenCrayola =
     { rgb =
         { r = 197, g = 227, b = 132 }
     , hex =

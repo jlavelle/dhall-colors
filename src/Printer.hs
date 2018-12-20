@@ -16,6 +16,7 @@ import Data.Char (isAlphaNum, toUpper)
 import Data.Foldable (fold)
 import Lens.Micro.Platform ((%~), _head, _tail, each)
 import Data.Monoid (Endo(..))
+import Control.Monad ((<=<))
 
 import Types (Color(..), RGB(..), Hex(..))
 
@@ -49,9 +50,12 @@ text :: Text -> Expr s a
 text = TextLit . Chunks []
 
 camelCase :: Text -> Text
-camelCase = fold . f . fmap (T.filter isAlphaNum) . T.words . replaceDiacritics . T.toLower
- where
-  f = _tail . each . _head %~ toUpper
+camelCase = fold
+          . (_tail . each . _head %~ toUpper)
+          . fmap (T.filter isAlphaNum)
+          . (T.splitOn "/" <=< T.splitOn "-" <=< T.words)
+          . replaceDiacritics
+          . T.toLower
 
 -- temporary hack until I find a better solution
 replaceDiacritics :: Text -> Text
