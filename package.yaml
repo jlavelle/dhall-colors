@@ -20,9 +20,9 @@ dependencies:
 - http-client
 - http-client-tls
 - tagsoup
-- attoparsec
 - microlens
 - microlens-platform
+- prettyprinter
 
 library:
   source-dirs: src
